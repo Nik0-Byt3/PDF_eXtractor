@@ -1,0 +1,8 @@
+*.pdf
+*.md
+/src/utils/__pycache__
+/progetto
+/src/output
+*.log
+/src/AI
+/src/__pycache__
