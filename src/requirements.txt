@@ -1,0 +1,44 @@
+# Web framework per creare l'app Flask
+Flask==2.3.2
+
+# Rilevamento lingua del testo
+langdetect==1.0.9
+
+# Libreria Transformers di Hugging Face per modelli NLP
+transformers==4.35.0
+
+# Libreria PyTorch per deep learning, usata dai modelli
+torch==2.0.1
+
+# Database vettoriale open source per ricerca semantica
+chromadb==0.3.27
+
+# Framework per costruire pipeline NLP con modelli LLM
+langchain==0.0.291
+
+# Modello di tokenizzazione usato da modelli Transformer
+sentencepiece==0.1.99
+
+# Strumenti per la tokenizzazione e pre-processing di testi
+sacremoses==0.0.53
+
+# Libreria NLP per tokenizzazione, stopword, etc.
+nltk==3.8.1
+
+# Dataset per modelli NLP (Hugging Face datasets)
+datasets==2.13.1
+
+# Creazione e manipolazione di file PowerPoint (.pptx)
+python-pptx==0.6.21
+
+# Manipolazione e lettura di PDF
+PyPDF2==3.0.1
+
+# Lettura e manipolazione di PDF (PyMuPDF aka fitz)
+PyMuPDF==1.22.5
+
+# Estrazione testo e dati strutturati da PDF
+pdfplumber==0.9.0
+
+# Modelli di embedding per NLP (basati su Transformers)
+sentence-transformers==2.2.2

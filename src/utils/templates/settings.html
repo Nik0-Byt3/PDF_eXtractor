@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8" />
+	<title>Impostazioni</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+
+<body>
+	<div class="d-flex align-items-center justify-content-center vh-100">
+	  <div class="container container-main">
+		<h2 class="page-title">Benvenuto, modifica le impostazioni</h2>
+		<form method="POST" action="/salva_impostazioni">
+			<div>
+				<label class="switch">
+					<input type="checkbox" name="traduzione" {% if config.ENABLE_TRANSLATION %}checked{% endif %} />
+					<span class="slider round"></span>
+				</label>
+				<span>Abilita traduzione</span>
+				<br/><br/>
+
+				<label class="switch">
+					<input type="checkbox" name="riassunto" {% if config.ENABLE_SUMMARIZATION %}checked{% endif %} />
+					<span class="slider round"></span>
+				</label>
+				<span>Abilita riassunto</span>
+				<br/><br/>
+
+				<label class="switch">
+					<input type="checkbox" name="estrazione_immagini" {% if config.ENABLE_IMAGE_EXTRACTION %}checked{% endif %} />
+					<span class="slider round"></span>
+				</label>
+				<span>Estrai immagini</span>
+				<br/><br/>
+				<button type="submit" class="btn btn-success w-100 pointer-cursor">
+					Salva e modifica le impostazioni
+					<div class="arrow-wrapper">
+						<div class="arrow"></div>
+					</div>
+				</button>
+			</div>
+		</form>
+		<br/>
+	  </div>
+	</div>
+
+	<!-- Footer Start -->
+	<div class="footer-5-column">
+	  <div class="footer-container">
+		<!-- Footer Navigation Start -->
+		<div class="footer-navbar-container">
+		  <div class="footer-company-details">
+			<!-- <div class="footer-details-inner"> -->
+			<div class="footer-content">
+			  <p>
+				Questo progetto nasce come prima esperienza di sviluppo in Python e Flask,
+		  con l'obiettivo di creare un'applicazione web per l'estrazione di capitoli da file PDF.
+		  Il progetto propone di semplificare la gestione dei contenuti PDF,
+		  rendendo l'estrazione dei capitoli un processo rapido e intuitivo.
+			  </p>
+			</div>
+			<div class="footer-icons">
+			  <a href="https://www.facebook.com" target="_blank">
+				<i class="fab fa-facebook fa-2x" style="color: #1877F2;"></i>
+			  </a>
+			  <a href="https://www.instagram.com" target="_blank">
+				<i class="fab fa-instagram fa-2x" style="color: #E1306C;"></i>
+			  </a>
+			  <a href="https://www.twitter.com" target="_blank">
+				<i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
+			  </a>
+			  <a href="https://www.linkedin.com" target="_blank">
+				<i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
+			  </a>
+			</div>
+			<!-- </div> -->
+		  </div>
+		  <div class="footer-navbar">
+			<div class="footer-navbar-col">
+				<h5>Prodotto</h5>
+				<ul>
+					<li><a href="#">Funzionalità</a></li>
+					<li><a href="#">Prezzi</a></li>
+					<li><a href="#">Demo</a></li>
+					<li><a href="#">Integrazioni</a></li>
+				</ul>
+			</div>
+			<div class="footer-navbar-col">
+				<h5>Supporto</h5>
+				<ul>
+					<li><a href="#">Centro assistenza</a></li>
+					<li><a href="#">Contattaci</a></li>
+					<li><a href="#">Domande frequenti</a></li>
+					<li><a href="#">Tutorial</a></li>
+				</ul>
+			</div>
+			<div class="footer-navbar-col">
+				<h5>Azienda</h5>
+				<ul>
+					<li><a href="#">Chi siamo</a></li>
+					<li><a href="#">Lavora con noi</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Novità</a></li>
+				</ul>
+			</div>
+			<div class="footer-navbar-col">
+				<h5>Legale</h5>
+				<ul>
+					<li><a href="#">Termini d'uso</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Cookie</a></li>
+					<li><a href="#">Licenze</a></li>
+				</ul>
+			</div>
+		  </div>
+		  <!-- Footer Navigation End -->
+		</div>
+
+		<div class="footer-copyright">
+		  <p>© 2025 PDF COURSE GENERATOR - All Rights Reserved</p>
+		</div>
+	  </div>
+	</div>
+	<!-- Footer End-->
+</body>
+</html>
